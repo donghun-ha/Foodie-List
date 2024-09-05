@@ -61,7 +61,7 @@ VALUES (?, ?, ?, ?, ?, ?, ?)
       """
         update store set name = ?, phone = ?, estimate = ?, image =? where seq = ?
       """,
-      [store.seq, store.name, store.phone, store.estimate, store.image],
+      [store.name, store.phone, store.estimate, store.image, store.seq],
     );
     return result;
   }
@@ -72,5 +72,14 @@ VALUES (?, ?, ?, ?, ?, ?, ?)
     return await db.rawDelete("""
         DELETE FROM store WHERE seq = ?
       """, [seq]);
+  }
+
+  // searchStore: 검색 기능 추가
+  Future<List<Store>> searchStore(String query) async {
+    final Database db = await initializeDB();
+    final List<Map<String, Object?>> queryResult = await db.rawQuery("""
+      SELECT * FROM store WHERE name LIKE ?
+    """, ['%$query%']);
+    return queryResult.map((e) => Store.fromMap(e)).toList();
   }
 }// Done

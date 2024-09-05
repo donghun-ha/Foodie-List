@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodie_list/view/foodie_list.dart';
+import 'package:foodie_list/view/splash.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const FoodieList(),
+      debugShowCheckedModeBanner: false,
+      home: const Splash(),
     );
   }
 }
