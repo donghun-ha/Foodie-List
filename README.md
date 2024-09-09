@@ -1,6 +1,26 @@
 # Foodie-List
 Foodie List : “이 리스트는 각 맛집의 상세한 설명, 위치 정보(위도 및 경도), 사진, 그리고 평가를 포함하여 최고의 맛집들을 소개합니다. 맛있는 음식을 찾는 분들에게 완벽한 가이드가 되어줄 것입니다.”
 
+# Packages
+  #slidable
+  flutter_slidable: ^3.1.1
+  #GetX
+  get: ^4.6.6
+  #sqflite
+  sqflite: ^2.3.3+1
+  #path
+  path: ^1.9.0
+  #image_picker
+  image_picker: ^1.1.2
+  #GPS
+  geolocator: ^13.0.1
+  # 지도 그림
+  flutter_map: ^7.0.2
+  #지도 현위치로 옮기기
+  latlong2: ^0.9.1
+  #위치 정보
+  geocoding: ^3.0.0
+
 9월 4일 (수) 
 # 기본적인 UI구성 / VM Database Handelr Calss 생성 / model store class 생성 / view foodie_list, edit, add 생성
 # database를 연동시켜 추가시 foodie list page에 생성되도록 구현
